@@ -26,18 +26,29 @@ class DicePage extends StatelessWidget {
             //flex: 2,
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Image.asset('images/dice1.png'),
+              child: TextButton( //this button also has padding. Hence, we can remove padding widget
+                //In lecture, flatbutton was used
+                onPressed: () {
+                  print('Left button pressed');
+                },
+                child: Image.asset('images/dice1.png'),
+              ),
             ), //same as we used in previous projects
           ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Image.asset('images/dice1.png'),
+              child: TextButton(
+                //In lecture, flatbutton was used
+                onPressed: () {
+                  print('Right button pressed');
+                },
+                child: Image.asset('images/dice1.png'),
+              ),
             ),
           ),
         ],
       ),
     );
-
   }
 }
